@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILDLIFE P.A</title>
+    <script src="https://kit.fontawesome.com/b26abb1f28.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="images/logo1.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link href=" https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans+Condensed:wght@700&display=swap " rel="stylesheet ">
+    <link href=" https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans+Condensed:wght@700&display=swap " rel="stylesheet ">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo1.png" alt="logo1"> </a>
+        <h1 class="titre">Wildlife P.A</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-trigger="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="offcanvas-header mt-1">
+                <button type="button" class="btn-close float-left"><i class="fas fa-times"></i></button>
+                <h5 class="text-white py-2 " style="text-align: left; "></h5>
+            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hide">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Accueil</a>
+                </li>
+                <li class="nav-item hide">
+                    <a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i>Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="photos.html" class="nav-link"><i class="fas fa-image"></i>Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html" class="nav-link"><i class="fas fa-video"></i>Vidéos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="far fa-user"></i>Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link"><i class="fas fa-address-card"></i>Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!------------------------>
+        <section class="search-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <form>
+                            <div class="p-1 bg-dark shadow">
+                                <div class="input-group">
+                                    <input type="search" placeholder="Rechercher des Photos, Vidéos & Articles..... " class="form-control border-0 bg-light">
+                                    <div class="input-group-append">
+                                        <!-------------------------->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm dropdown-toggle smallscreen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         OPTIONS
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="photos.html"><i class="fas fa-image mr-2"></i>Photos</a>
+                                                <a class="dropdown-item" href="videos.html"><i class="fas fa-video mr-2"></i>Vidéos</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="login.html"><i class="far fa-user m-2"></i>Login</a>
+                                                <a class="dropdown-item" href="articles.html"><i class="fas fa-newspaper mr-2"></i>Articles</a>
+                                            </div>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-link"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+    </nav>
+    <section class="publications">
+
+        <div class="article" id="pangolin">
+            <div class="lefft">
+                <a href="images/pangolins.jpg" class=" galerie-article ">
+                    <img src="images/pangolins.jpg " alt="pangolin-rticle "> </a>
+            </div>
+
+            <div class="right ">
+                <p class="date ">15 mars 2019, 10 h 24 min</p>
+                <h1 class="titre-1 ">Le Pangolin: l'animal le plus braconné du monde</h1>
+                <p class="contenu ">Originaire d'Afrique subsaharienne et d'Asie, le pangolin compte huit espèces. Ce drôle de mammifère nocturne est très convoité par les braconniers qui, avides de sa chair et de ses écailles, le chassent sans répit depuis de nombreuses
+                    années. Les écailles du pangolin sont composées de kératine (tout comme les cornes de rhinocéros également très convoitées), protéine naturellement présente dans les ongles et les cheveux chez les humains et considérée comme extrêmement
+                    précieuse dans certaines civilisations. En Asie, la "poudre miracle " issue des écailles de pangolin aux prétendues vertus curatrices (voire aphrodisiaques) se vend à prix d'or. Les écailles de pangolin font aussi l'objet de superstition.
+                    Selon la croyance, en glisser une dans sa poche "porterait chance ". La viande et la soupe de fœtus de pangolin sont également des mets réputés, notamment en Chine et en Asie du Sud-Est.
+                    <h3 class="titre-1 ">Une espèce désormais protégée</h3>
+                    <p class="sous-contenu "> La situation des 8 espèces de pangolins étant particulièrement alarmante, tous les pays du monde ont décidé d’interdire la chasse de cet animal et sa vente et l’ont même qualifié d’espèce protégée. Grand amateur de fourmis et de termites,
+                        la disparition du pangolin serait une catastrophe écologique. Les insectes proliféreraient dans les régions concernées et tout l’écosystème se verrait bouleversé. Malheureusement, ces mesures ne suffisent pas à arrêter le braconnage
+                        du pangolin. La demande est très forte du côté des Asiatiques, ce qui encourage les braconniers à en tuer illégalement des milliers chaque année. Animal très vulnérable, le pangolin (qui peut peser jusqu’à 35 kilos tout de même)
+                        se roule en boule dès qu’il sent poindre un danger. Les braconniers n’ont donc pas à fournir beaucoup d’efforts pour les attraper et les mettre dans leurs sacs. Quand on sait qu’un pangolin peut être vendu 1750 euros à un restaurant
+                        pour être cuisiné, qu’un kilo de viande ou de peau de pangolin coûte jusqu’à 300 dollars et qu’un kilo d’écailles peut se vendre 3000 dollars, on comprend pourquoi le commerce illégal de cet animal marche fort. Pour la vidéo, cliquez
+                        <a href="videos.html#pangolin-video">Ici</a>
+                        </a>
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+
+            </div>
+        </div>
+        <div class="article " id="elephant">
+            <div class="lefft ">
+                <a href="pictures/elephant.jpg " class="galerie-article ">
+                    <img src="pictures/elephant.jpg " alt="galerie-img "> </a>
+            </div>
+            <div class="right ">
+                <p class="date ">4 avril 2019, 10 h 24 min</p>
+                <h1 class="titre-2 ">Les éléphants sont en voie de disparition?</h1>
+                <p class="contenu ">Il n'y a pas de symbole plus emblématique de la conservation de la faune que l'éléphant noble qui marche dans les plaines d'Afrique et les jungles d'Asie. Cependant, alors que l'éléphant est admiré partout pour son intelligence et sa complexité
+                    émotionnelle, il est attaqué de toutes parts et risque tragiquement de disparaître. Et, si l'on en croit les conclusions d'une récente conférence sur la conservation au Botswana, c'est quelque chose qui pourrait se produire dès 2025,
+                    nous laissant peu de temps pour agir.
+                    <h3 class="titre-2 ">Les éléphants sont-ils vraiment menacés ?</h3>
+                    <p class=" sous-contenu "> La chasse à l'éléphant pour l'ivoire et le sport a réduit leur nombre de 50% au cours du siècle dernier.On estime qu'il reste 415 000 éléphants sur le continent africain. La population d'éléphants d'Asie a diminué de 50% au cours des
+                        trois dernières générations et est toujours en déclin. On estime qu'il en reste entre 40 000 et 50 000 dans la nature. Et il ne reste qu'entre 2 400 et 2 800 éléphants de Sumatra.De nombreuses initiatives ont été mises en œuvre
+                        pour réduire le braconnage de l'ivoire. De plus, quelques espèces d'Afrique du Sud ont récupéré leurs populations et se développent. Malheureusement, les éléphants restent dans l'ensemble menacés d'extinction, les espèces d'éléphants
+                        d'Asie de Sumatra étant les plus proches de la limite. Les éléphants de Sumatra sont en fait en danger critique d'extinction. Tous les autres éléphants d'Afrique et d'Asie restent inscrits aux annexes de la CITES comme étant menacés
+                        ou vulnérables, avec des limitations strictes sur le commerce de l'ivoire des éléphants d'Afrique et des interdictions sur le commerce des éléphants d'Asie et leurs parties et produits.</p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="rinocerose">
+            <div class="lefft ">
+                <a href="pictures/rino.jpeg " class="galerie-article ">
+                    <img src="pictures/rino.jpeg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">9 Mai 2020, 00 h 54 min</p>
+                <h1 class="titre-3 ">RHINOCÉROS : Des cornes très convoitées</h1>
+                <p class="contenu ">Les rhinocéros sont les plus gros mammifères terrestres, juste après les éléphants. Ils sont facilement reconnaissables avec leur corps massif, leurs pattes courtes et la présence d’une ou deux cornes si caractéristiques juchées sur leur
+                    museau. Elles leur permettent de se protéger et de se défendre. Mais elles sont aussi, hélas, l’un des facteurs qui conduit peu à peu à leur perte. En effet, en Asie, la corne de rhinocéros, à qui l’on prête des pseudos vertus thérapeutiques,
+                    est très prisée. La demande est intarissable, malgré tous les interdits, et pour y répondre le braconnage est constant. On compte actuellement cinq espèces de rhinocéros, deux en Afrique - le rhinocéros blanc et le rhinocéros noir
+                    - et trois en Asie - le rhinocéros unicorne d’Inde, le rhinocéros de la Sonde et le rhinocéros de Sumatra. Parmi elles, les deux plus grandes espèces qui survivent de nos jours sont le rhinocéros blanc d’Afrique et le rhinocéros unicorne
+                    d’Asie. Bien que les populations de rhinocéros blanc aient augmenté de façon importante au cours des dernières années, grâce aux actions de conservation menées, et que l’espèce n’est pas à ce jour menacée de disparition, les quatre
+                    autres le sont à très court terme.
+                    <h3 class="titre-3 ">Plus chère que l’or</h3>
+                    <p class=" sous-contenu ">La corne de rhinocéros se revendrait sur les marchés parallèles à plusieurs dizaines de milliers d’euros le kilo, soit plus que le kilo d'or. La corne entière ou réduite en poudre est destinée à des consommateurs d’Asie, particulièrement
+                        au Vietnam et en Chine.Le rhinocéros a peu de prédateurs naturels. Son principal ennemi demeure les braconniers et trafiquants qui le traquent sans répit pour s’approprier sa corne. Autre menace pesant sur l’animal, son habitat
+                        qui diminue. Les prairies fertiles et les forêts sont peu à peu remplacées par des terres agricoles. </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="hipopotame">
+            <div class="lefft ">
+                <a href="pictures/3-hypopo.jpg " class="galerie-article ">
+                    <img src="pictures/3-hypopo.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">4 septembre 2020, 10 h 24 min</p>
+                <h1 class="titre-4 ">L’hippopotame est un animal agressif et dangereux</h1>
+                <p class="contenu ">Connu pour ses airs paisibles à brouter de l’herbe et à barboter dans l’eau, l’hippopotame est pourtant un animal dangereux et agressif qui n’hésite pas à s’attaquer à l’homme s’il se sent menacé ou simplement dérangé. Chaque année, plusieurs
+                    centaines d’humains sont tués en Afrique par des hippopotames.
+                    <h3 class="titre-4 ">Un herbivore qui mange de la viande</h3>
+                    <p class=" sous-contenu ">Si son régime alimentaire est bien celui d’un herbivore, et sa nourriture composée à grande majorité d’herbe, de plantes aquatiques ou de fruits, il lui arrive cependant de manger de la viande, comme des carcasses abandonnées par des
+                        prédateurs. Les scientifiques reconnaissent cependant que leur estomac n’est pas adapté pour digérer la viande en trop grande quantité et de manière régulière.
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="ours-polaire">
+            <div class="lefft ">
+                <a href="pictures/polaire.jpg " class="galerie-article ">
+                    <img src="pictures/polaire.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">21 septembre 2020, 13 h 22 min</p>
+                <h1 class="titre-5 ">Les ours polaires, victimes collatérales de l’urgence climatique</h1>
+                <p class="contenu ">En 35 ans, la banquise a perdu 96 % de sa surface selon la NASA… Une conséquence dramatique de l’urgence climatique, dont les ours polaires sont l’une des premières victimes. La banquise, plus assez solide, ne peut désormais leur servir
+                    ni de lieu de reproduction ni de territoire de chasse. À tel point que les invasions d’ours polaires dans les zones habitées se multiplient.
+                    <h3 class="titre-5 ">Les ours polaires, contraints de se rapprocher des villes pour se nourrir</h3>
+                    <p class=" sous-contenu "> Depuis le début du mois de décembre 2019, 56 ours polaires affamés tentent de s’approvisionner en rejoignant les terres l’extrême nord-est de la Russie. Sur place, des villageois ont disposé, avec le concours d’organisations et à distance
+                        des habitations, des cadavres de morses pour aider les plantigrades à se nourrir et tenter de les éloigner. Malheureusement, « les mâles accaparent la nourriture, aux dépens des femelles et petits », explique Ria Novosti Tatiana
+                        Minenko, responsable de l’association locale « Patrouille ursidé ».L’an dernier, des dizaines d’ours blancs en quête de nourriture s’étaient également rapprochés de zones urbanisées, au nord de la Russie. Des vidéos partagées sur
+                        les réseaux sociaux montraient des ours affamés, voire agressifs, cherchant à manger dans les poubelles et dans les maisons. Cette invasion sans précédent avait conduit les pouvoirs publics à déclarer l’état d’urgence. Le recours
+                        aux signaux lumineux et sonores n’ayant pas produit les effets escomptés, des experts avaient alors été missionnés pour endormir et éloigner les plantigrades, selon The Guardian. L’Agence fédérale russe chargée de la surveillance
+                        de l’environnement ayant refusé d’autoriser l’abattage des animaux, y compris les plus agressifs.</p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="panda">
+            <div class="lefft ">
+                <a href="images/panda.jpg " class="galerie-article ">
+                    <img src="images/panda.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">8 octobre 2020, 5 h 45 min</p>
+                <h1 class="titre-6 ">Protéger le panda n'aide pas toutes les espèces de son habitat</h1>
+                <p class="contenu ">Après plus de 20 ans de politiques pour la sauvegarde du mammifère, la Chine a retiré le panda de la catégorie « en voie de disparition ». Si le panda reste référencé au rang de « vulnérable », 1 800 individus seraient vivants à l’état
+                    sauvage, ont indiqué les autorités chinoises.
+                    <h3 class="titre-6 ">Plus de 1 800 pandas en liberté</h3>
+                    <p class=" sous-contenu ">Depuis une dizaine d’années, les effectifs du panda géant augmentent légèrement. « Pourtant, il demeure l’une des espèces les plus menacées au monde », précise sur son site le WWF dont l’animal est le logo. « Son habitat continue à
+                        rétrécir, en raison notamment de l’expansion des zones agricoles et de la mise en œuvre de divers projets d’aménagement ». Dans les années 1980, seuls 1 114 pandas vivaient encore à l’état sauvage en Chine. Le ministre chinois
+                        de la Nature et de l’Environnement, cité par l’agence de presse chinoise Xinhua fait aujourd’hui état de plus de 1 800 individus vivant en liberté.</p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="gorille">
+            <div class="lefft ">
+                <a href="pictures/gorille.jpg " class="galerie-article ">
+                    <img src="pictures/gorille.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">18 octobre 2020, 15 h 05 min</p>
+                <h1 class="titre-7 ">LE GORILLE : Un colosse vulnérable</h1>
+                <p class="contenu ">Aujourd’hui, aucun gorille n’est à l’abri. Du fait de la disparition et de la fragmentation de leur habitat, les primates ont perdu une grande partie de leur espace vital. Nombre d’individus ont succombé à des maladies transmises par l’homme
+                    et leur braconnage se poursuit à un rythme effréné.
+                    <h3 class="titre-7 ">Braconnage et chasse</h3>
+                    <p class=" sous-contenu ">Les gorilles sont tués pour leur viande, pour des parties de leur corps utilisées en médecine ou comme trophées ou sortilèges, ou encore capturés pour être revendus en tant qu’animaux de compagnie. Le commerce de la viande de brousse
+                        en Afrique de l'Ouest et centrale représente aujourd'hui la plus grande menace pour les gorilles. Les primates sont tués principalement pour satisfaire la demande de clients aisés dans les centres urbains, où la consommation de
+                        leur viande est considérée comme un signe de prestige social. Les jeunes gorilles sont également capturés pour devenir des animaux de compagnie. Accessoirement, les pattes, les crânes et autres parties des animaux morts sont vendus
+                        empaillés comme décoration, ou chargés de pouvoirs mystiques ou médicinaux. Les gorilles constituent des proies faciles pour les chasseurs et ils sont particulièrement rentables en raison de leur corpulence qui permet de revendre
+                        un volume de viande important. Du fait de leur faible taux de reproduction, les gorilles sont menacés par cette pratique de la chasse car même un infime prélèvement est à même de provoquer le déclin de leurs populations.
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="lion">
+            <div class="lefft ">
+                <a href="pictures/lion.jpg " class="galerie-article ">
+                    <img src="pictures/lion.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">26 janvier 2021, 11 h 45 min</p>
+                <h1 class="titre-8 ">Les lions d'Afrique pourraient disparaître avant 2050</h1>
+                <p class="contenu ">En Afrique, le lion n’évolue plus que dans 15 % de ce qui était autrefois son territoire tout entier. Le chiffre est encore plus alarmant si on le ramène à l’Afrique de l’Ouest où la situation est la plus critique. Des chercheurs ont ainsi
+                    mené une étude sur six ans et onze pays de la région. Les résultats sont aussi édifiants qu’inquiétants. Les lions ne sont plus présents que dans cinq de ces pays : Sénégal, Nigéria, Bénin, Niger et Burkina Faso. Cette zone de présence
+                    de 49 000 km² ne représente de 1,1 % de la zone historiquement habitée par le lion d’Afrique (Panthera leo leo). Les chercheurs se sont concentrés sur les 21 zones protégées pour la conservation de l’espèce. Là encore, surprise : si
+                    21 zones sont officiellement considérées comme habitat protégé pour les lions, la plupart sont inexistantes dans la pratique. Aucun budget n’y est alloué, aucune gestion n’en est faite et il n’existe aucun personnel ou patrouille pour
+                    encadrer ces zones dans lesquelles on ne trouve d’ailleurs pratiquement plus de grands félins.
+                    <h3 class="titre-8 ">La moitié des lions africains ont disparu ces 25 dernières années</h3>
+                    <p class=" sous-contenu ">Il y a deux fois moins de lions d'Afrique aujourd'hui qu'il y a 25 ans. Les programmes de conservation visant à protéger les espèces en voie de disparition misent sur la cohabitation Hommes-lions dans la savane africaine.Pour chaque
+                        lion vivant à l'état sauvage, on compte quatorze éléphants d'Afrique et quinze gorilles des plaines de l'Ouest. On dénombre également plus de rhinocéros que de lions aujourd'hui. L'espèce emblématique a disparu de 94 % de son aire
+                        de répartition historique, qui comprenait autrefois la quasi-totalité du continent africain, mais se limite désormais à moins de 1 710 000 km². L'Union internationale pour la conservation de la nature (UICN), qui détermine le statut
+                        de conservation des espèces, a classé les lions parmi les espèces vulnérables à l'extinction, avec moins de 25 000 spécimens décomptés en Afrique.
+
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="tortue">
+            <div class="lefft ">
+                <a href="images/tortue.jpg " class="galerie-article ">
+                    <img src="images/tortue.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">2 fevrier 2021, 10 h 55 min</p>
+                <h1 class="titre-9 ">TORTUES MARINES : Espèces convoitées</h1>
+                <p class="contenu-tortue ">Les tortues peuplent nos océans depuis plus de 150 millions d’années. Elles ont côtoyé les dinosaures et surmonté toutes les crises climatologiques. Pourtant, aujourd’hui, six des sept espèces vivantes sont considérées comme menacées ou
+                    gravement menacées.
+                    <h3 class="titre-9 ">Une Proie facile</h3>
+                    <p class=" sous-contenu-tortue ">Leur longue évolution est une véritable réussite. Il n’est pas étonnant qu’elles aient survécu à de nombreuses extinctions. Après tant de chemin parcouru sans encombre, les tortues des mers arriveront-elles à survivre à leur principal
+                        prédateur : l’homme ? Chaque année, des centaines de milliers de tortues marines meurent, piégées dans les filets droits, les palangres, les filets dérivants ou les chaluts utilisés pour pêcher la crevette. Les tortues marines,
+                        respirant grâce à des poumons, se noient quand elles ne peuvent pas remonter à la surface pour respirer. Les pêches à filets « gill » et à longue ligne sont également des causes majeures de la mortalité de ces tortues. Partout
+                        dans le monde, des centaines de milliers sont prises tous les ans dans les chaluts, dans les hameçons et dans les filets de pêche.
+
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="crocodile">
+            <div class="lefft ">
+                <a href="images/crocodile.jpeg " class="galerie-article ">
+                    <img src="images/crocodile.jpeg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">12 fevrier 2021, 20 h 15 min</p>
+                <h1 class="titre-10 ">Le crocodile marin n’est plus menacé</h1>
+                <p class="contenu-crocodile ">Le crocodile marin est inscrit à l'Annexe I de la Convention sur le commerce international des espèces de faune et de flore sauvages menacées d'extinction (CITES) dans la majeure partie de son aire de répartition, sauf en Australie et
+                    en Papouasie-Nouvelle-Guinée où il est inscrit en Annexe II. L'Union internationale pour la conservation de la nature (UICN) répertorie l'espèce en catégorie préoccupation mineure. La chasse non réglementée pratiquée pendant le XXe
+                    siècle a généré un effondrement de sa population partout dans le monde. Espèce protégée depuis 1971, elle n'est dorénavant plus considérée comme menacée. L’animal est chassé pour sa viande, ses œufs et surtout pour sa peau qui représente
+                    une importante valeur marchande. Le crocodile marin a une espérance de vie de 70 ans.
+                    <h3 class="titre-10 ">Crocodile marin : une morsure fatale</h3>
+                    <p class=" sous-contenu-crocodile ">Le crocodile marin possède une tête assez longue et un corps large doté de quatre rangées parallèles de crêtes qui contraste avec les autres crocodiliens. Sa peau revêt généralement une teinte brune avec des zones gris clair et des
+                        bandes sombres sur les flancs inférieurs. Le dessous est jaune crème tendant vers le gris le long de la queue. Comme chez les autres espèces, ses yeux, oreilles et narines se situent au-dessus de la tête ce qui lui permet de rester
+                        quasiment submergé lorsqu'il guette une proie. Ses mâchoires - composées de 64 à 68 dents pointues - lui confèrent la plus puissante morsure de tous les animaux vivants (16 000 newtons).
+
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="manchot">
+            <div class="lefft ">
+                <a href="images/manchots.jpg " class="galerie-article ">
+                    <img src="images/manchots.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">22 mars 2021, 10 h 05 min</p>
+                <h1 class="titre-11 ">Les manchots empereurs menacés d'extinction d'ici 2100</h1>
+                <p class="contenu-manchots ">Selon une étude coordonnée par des chercheurs du CNRS, publiée dans la revue PNAS, les manchots empereurs de Terre Adélie risquent de disparaître en 2100, victimes de la fonte de la banquise Antarctique liée au réchauffement climatique..
+                    Alors que le Groupement intergouvernemental d'études sur le climat (GIEC) annonce une hausse moyenne des températures d'environ 0,2°c tous les 10 ans, une nouvelle étude coordonnée par les chercheurs français du Centre d'études biologiques
+                    de Chizé (CNRS), en collaboration avec l'institut de recherche américain Woods Hole Oceanographic Institution, prédit une ''quasi-extinction'' du manchot empereur d'Adélie en 2100, victimes de la fonte de la banquise Antarctique. La
+                    population de manchots empereurs (Aptenodytes forsteri) passerait de 6.000 couples en 1962 à environ 400 en 2100, soit un déclin de 93%, souligne l'étude publiée le 27 janvier dans le PNAS* (Proceedings of the National Academy of Sciences).
+                    Les scientifiques évaluent aussi la probabilité moyenne de voir disparaître définitivement cette colonie à 36 % d'ici 2100. Cette étude s'est concentrée sur les fluctuations climatiques qui réduisent la superficie de la banquise. Celle-ci
+                    couvre une surface 40% moins grande qu'il y a 26 ans le long de la péninsule ouest de l'Antarctique, avait déjà souligné le WWF dans une étude publiée en décembre 2007, qui observait une baisse de 50% de la population de manchots empereurs
+                    sur la même période. En effet, c'est sur cette banquise que les manchots se reproduisent et qu'ils muent. Mais pas seulement : cette réduction entraîne également une diminution des réserves de krill, leur principale ressource alimentaire.
+                    Pour éviter l'extinction, les manchots empereurs doivent s'adapter rapidement en migrant ou en changeant leur cycle de vie, soulignent les chercheurs. Toutefois, ces oiseaux de mer semblent lents à modifier leur comportement, ce qui
+                    les menace d'extinction, notent les scientifiques qui observent par ailleurs, que ces changements climatiques pourraient se révéler favorables à certaines espèces d'oiseaux sub-antarctiques et sub-tropicales, notamment les albatros.
+                    Les chercheurs s'attendent à une réorganisation des espèces au sein de l'hémisphère Sud, en relation avec les évolutions du climat dans les prochaines années. Rappelons que selon le WWF, les manchots papou et les manchots à jugulaire
+                    ont également vu leur population tomber de 30 à 66% en Antarctique tandis que les populations de manchots Adélie ont baissé de 65% ces 25 dernières années.
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="morse">
+            <div class="lefft ">
+                <a href="images/morse.jpg " class="galerie-article ">
+                    <img src="images/morse.jpg " alt="galerie-img "></a>
+            </div>
+
+            <div class="right ">
+                <p class="date ">15 avril 2021, 20 h 15 min</p>
+                <h1 class="titre-12 ">Morse de l'Atlantique</h1>
+                <p class="contenu-morse ">Le morse de l’Atlantique est connu pour sa présence imposante, ses moustaches et ses défenses en ivoire qu’il utilise pour s’alimenter en fourrageant le fond de l’océan ou pour briser la glace et se hisser hors de l’eau. Autant les femelles
+                    que les mâles sont muni.e.s de défenses, qui n’atteignent cependant pas la longueur de celles vues chez les morses du Pacifique. Au Canada, on retrouve de petites populations de morses de l’Atlantique dans l’Extrême Arctique et dans
+                    la région arctique centrale. Entre le 17e et le 19e siècle, les morses de l’Atlantique ont été chassés pour leur ivoire, leur viande et leur graisse, jusqu’au bord de l’extinction. Les populations que l’on retrouvait autrefois dans
+                    le Saint-Laurent, à Terre-Neuve et en Nouvelle-Écosse sont maintenant éteintes. Le morse est apparenté aux phoques et aux lions de mer, et tout comme les mammifères marins à nageoires, lorsqu’il n’est pas dans l’océan, il vit en groupes,
+                    sur la terre ou la banquise, au sein de ce que l’on appelle une échouerie.
+                    <h3 class="titre-12 ">Menaces</h3>
+                    <p class=" sous-contenu-morse ">Il existe deux sous-espèces de morses : de l’Atlantique et du Pacifique. Et le monde change très vite pour toutes les deux. Les morses sont menacés par le dérèglement du climat causant la fonte de la banquise, ce qui entraînera une
+                        surpopulation aux échoueries et un accès limité à leur habitat de prédilection. Les morses sont peut-être massifs, mais ils sont extrêmement sensibles aux bruits et au stress. La fonte de la banquise apporte des opportunités économiques
+                        pour l’Arctique, entre autres par l’exploration pétrolière et gazière, et l’augmentation de la navigation à travers des habitats marins fragiles. Ce bruit et cette activité perturbent les morses. Une nuisance peut mener à une panique,
+                        qui peut être fatale pour ces animaux.
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A</p>
+
+            </div>
+        </div>
+        <div class="article" id="zebre">
+            <div class="lefft ">
+                <a href="images/zebre.jpg " class="galerie-article ">
+                    <img src="images/zebre.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">18 Mai 2021, 5h 15 min</p>
+                <h1 class="titre-13 ">L'apparition de zèbres aux rayures étranges inquiète les scientifiques</h1>
+                <p class="contenu-zebre ">
+                    <p>Selon une nouvelle étude, les animaux dont la robe présente des taches anormales pourraient être nés de parents consanguins. Une preuve terrible des effets de la fragmentation des habitats sur la faune sauvage.</p>
+                    Tout le monde sait que les zèbres ont des rayures noires et blanches. Mais, il arrive parfois que la robe de ces équidés africains soit pour le moins inhabituelle ; elle peut alors présenter de grandes taches noires ou des rayures claires sur un pelage
+                    doré. Des zèbres tachetés font également leur apparition. En 2019, des scientifiques ont ainsi observé un zébreau à la robe noire parsemée de petites taches blanches dans la réserve nationale du Masai Mara au Kenya. Généralement rares
+                    chez les mammifères, ces anomalies sont souvent causées par des mutations génétiques ciblant la production d’un pigment naturel, la mélanine. La biologiste Brenda Larison fut donc surprise de découvrir qu’une population de zèbres des
+                    plaines vivant à proximité du lac Mburo, en Ouganda, comptait un nombre anormalement élevé (environ 5 %) d’individus arborant d’étranges rayures. Des trois espèces de zèbres, ceux des plaines sont les moins menacés. Pourtant, leur
+                    population a chuté de 25 % depuis 2002 et les scientifiques dénombrent environ 500 000 animaux évoluant au sein d’une aire de répartition s’étendant de l’Éthiopie jusqu’en Afrique du Sud. La pose de clôtures, la construction de routes
+                    et le développement humain ont entraîné la fragmentation de l’habitat des équidés, qui se retrouvent désormais parqués dans de petites poches de terre, à l’image de la population du lac Mburu. Un phénomène qui empêche la migration
+                    entre les troupeaux de certains individus.Tout le monde sait que les zèbres ont des rayures noires et blanches. Mais, il arrive parfois que la robe de ces équidés africains soit pour le moins inhabituelle ; elle peut alors présenter
+                    de grandes taches noires ou des rayures claires sur un pelage doré. Des zèbres tachetés font également leur apparition. En 2019, des scientifiques ont ainsi observé un zébreau à la robe noire parsemée de petites taches blanches dans
+                    la réserve nationale du Masai Mara au Kenya. Généralement rares chez les mammifères, ces anomalies sont souvent causées par des mutations génétiques ciblant la production d’un pigment naturel, la mélanine. La biologiste Brenda Larison
+                    fut donc surprise de découvrir qu’une population de zèbres des plaines vivant à proximité du lac Mburo, en Ouganda, comptait un nombre anormalement élevé (environ 5 %) d’individus arborant d’étranges rayures. Des trois espèces de zèbres,
+                    ceux des plaines sont les moins menacés. Pourtant, leur population a chuté de 25 % depuis 2002 et les scientifiques dénombrent environ 500 000 animaux évoluant au sein d’une aire de répartition s’étendant de l’Éthiopie jusqu’en Afrique
+                    du Sud. La pose de clôtures, la construction de routes et le développement humain ont entraîné la fragmentation de l’habitat des équidés, qui se retrouvent désormais parqués dans de petites poches de terre, à l’image de la population
+                    du lac Mburu. Un phénomène qui empêche la migration entre les troupeaux de certains individus. En migrant, les animaux injectent de nouveaux gènes au sein des populations, ce qui est essentiel pour la survie durable d’une espèce. Un
+                    brassage génétique insuffisant favorise la consanguinité et, à terme, l’infertilité, les maladies et d’autres anomalies génétiques.
+
+                </p>
+                <p class="auteur ">W.P.A</p>
+            </div>
+        </div>
+        <div class="article " id="tigre">
+            <div class="lefft ">
+                <a href="pictures/tigre.jpg " class="galerie-article ">
+                    <img src="pictures/tigre.jpg " alt="galerie-img "></a>
+            </div>
+            <div class="right ">
+                <p class="date ">25 juin 2021, 10 h 15 min</p>
+                <h1 class="titre-14 ">LE TIGRE : Un félin adulé et convoité</h1>
+                <p class="contenu-tigre ">Aisément reconnaissable à sa fourrure rousse rayée de noir, le tigre Panthera tigris est le plus grand félin sauvage et l'un des plus grands carnivores terrestres. Super-prédateur, il chasse principalement les cerfs et les sangliers, bien
+                    qu'il puisse s'attaquer à des proies de taille plus importante comme les buffles. Rivalisant avec le lion pour le statut de « roi des animaux » dans la culture traditionnelle, le tigre est une figure emblématique représentant la férocité.
+                    Jusqu'au 19ème siècle, sa réputation de mangeur d’homme lui colle à la peau. Pourtant, parmi les animaux sauvages, ce ne sont généralement pas les tigres qui tuent le plus. Et pour cause, le tigre est très vite éduqué par sa mère pour
+                    éviter les êtres humains qui le persécutent. La fascination qu’il exerce par son charisme et sa place dans l’inconscient collectif en fait aujourd’hui l’une des espèces les plus braconnées de la planète. Recherchés pour leurs peaux
+                    mais aussi pour diverses parties de leur corps, supposées soigner diverses pathologies dans la médecine traditionnelle chinoise, les félins sont victimes d’un trafic international, exercé par de puissantes mafias. Aujourd’hui, personne
+                    ne peut dire s’il y aura encore des tigres sauvages dans 50 ans.
+                    <h3 class="titre-14 ">Braconnage et commerce illégal</h3>
+                    <p class=" sous-contenu-tigre ">La plus grande menace qui pèse actuellement sur les populations de tigres demeure le braconnage, pour répondre à la demande soutenue de produits dérivés du tigre – essentiellement pour la médecine traditionnelle. La trafic illégal
+                        à grande échelle des produits dérivés est responsable de la disparition complète des félins dans plusieurs réserves qui avaient été créées pour le protéger. Les trafiquants spéculent sur le prix des produits dérivés, en les entreposant
+                        dans l’attente de la montée des prix inversement proportionnels au nombre de tigres encore vivants en nature.
+                    </p>
+                </p>
+                <p class="auteur ">W.P.A
+
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="wrapper ">
+        <footer>
+            <h4 class="cless">&copy; 2021, by Cless 
+                <a href="https://github.com/clessmatthaus"><img src="images/github.png" alt=""></a>
+            </h4>
+            <ul class="footer-m-links">
+                <li>
+                    <a href="index.html ">Accueil</a>
+                </li>
+                <li>
+                    <a href="articles.html ">Articles</a>
+                </li>
+                <li>
+                    <a href="videos.html ">Vidéos</a>
+                </li>
+                <li>
+                    <a href="photos.html ">Photos</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="presentation.html">Qui sommes-nous</a>
+                </li>
+            </ul>
+            <ul class="footer-infos-links ">
+                <li>
+                    <p>Liens externes</p>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.fr/animaux/le-pangolin-dafrique-est-le-mammifere-le-plus-braconne-du-monde">Le pangolin d’ Afrique est le mammifère le plus braconné du monde</a>
+                </li>
+                <li>
+                    <a href="https://www.lci.fr/international/le-pangolin-mammifere-mysterieux-menace-par-le-braconnage-1553282.html#:~:text=VID%C3%89O%20-%20Le%20pangolin%2C%20l%E2%80%99animal%20le%20plus%20braconn%C3%A9,tous%20les%20moyens%20il%20y%20a%205%20ans">les pangolins sont désormais protégés du braconnage</a>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.fr/animaux/8-especes-menacees-dextinction-par-le-trafic-illegal-despeces-sauvages">5 espèces menacées d'extinction par le trafic illégal d’espèces sauvages</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/FreeDocumentary">Free Documentary - Nature Chaine youtube </a>
+                </li>
+            </ul>
+            <div class="footer-links ">
+                <a href="https://instagram.com/free.documentary?utm_medium=copy_link ">
+                    <img src="images/insta.png " alt="insta "></a>
+                <a href="https://www.youtube.com/user/FreeDocumentary ">
+                    <img src="images/you.png " alt="you "></a>
+                <a href="https://www.facebook.com/FreeDocumentaryOfficial/ ">
+                    <img src="images/face.png " alt="face "></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

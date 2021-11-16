@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILDLIFE P A</title>
+    <script src="https://kit.fontawesome.com/b26abb1f28.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="images/logo1.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link href=" https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans+Condensed:wght@700&display=swap " rel="stylesheet ">
+    <link href=" https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans+Condensed:wght@700&display=swap " rel="stylesheet ">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo1.png" alt="logo1"> </a>
+        <h1 class="titre">Wildlife P.A</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-trigger="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="offcanvas-header mt-1">
+                <button type="button" class="btn-close float-left"><i class="fas fa-times"></i></button>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item hide">
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i>Accueil</a>
+                    </li>
+                    <li class="nav-item hide">
+                        <a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i>Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="photos.html" class="nav-link"><i class="fas fa-image"></i>Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="videos.html" class="nav-link"><i class="fas fa-video"></i>Vidéos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link"><i class="far fa-user"></i>Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><i class="fas fa-address-card"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!------------------------>
+            <section class="search-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <form>
+                                <div class="p-1 bg-dark shadow">
+                                    <div class="input-group">
+                                        <input type="search" placeholder="Rechercher des Photos, Vidéos & Articles..... " class="form-control border-0 bg-light">
+                                        <div class="input-group-append">
+                                            <!-------------------------->
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm dropdown-toggle smallscreen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         OPTIONS
+                                            </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="photos.html"><i class="fas fa-image mr-2"></i>Photos</a>
+                                                    <a class="dropdown-item" href="videos.html"><i class="fas fa-video mr-2"></i>Vidéos</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="login.html"><i class="far fa-user m-2"></i>Login</a>
+                                                    <a class="dropdown-item" href="articles.html"><i class="fas fa-newspaper mr-2"></i>Articles</a>
+                                                </div>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-link"><i class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+    </nav>
+
+
+    <div class="background-img">
+        <div class="content">
+            <header>CONNEXION</header>
+            <form action="#">
+                <div class="champ">
+                    <span class="fa fa-user"></span>
+                    <input type="text" class="stunna" required placeholder="Email ou Telephone">
+                </div>
+                <div class="champ espace">
+                    <span class="fa fa-lock "></span>
+                    <input type="password" class="pass-key stunna" required placeholder="Mot de passe">
+                    <span class="show uno">Montrer</span> </div>
+                <div class="motdepasse">
+                    <a href="#">Mot de passe oublié?</a>
+                </div>
+                <div class="champ">
+
+                    <input type="submit" class="stunna" value="Se connecter">
+                </div>
+            </form>
+            <div class="login"> Se connecter avec</div>
+            <div class="links-login">
+                <div class="facebook-login">
+                    <i class="fab fa-facebook"><span>Facebook</span></i>
+                </div>
+                <div class="instagram-login">
+                    <i class="fab fa-instagram"><span>Instagram</span></i>
+                </div>
+            </div>
+            <div class="enregistrement">Vous n’avez pas de compte ?
+                <a href="#"> Inscrivez-vous</a>
+            </div>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+    <div class=" wrapper ">
+        <footer>
+            <h4 class="cless ">&copy; 2021, by Cless
+                <a href="https://github.com/clessmatthaus "><img src="images/github.png " alt=" "></a>
+            </h4>
+            <ul class="footer-m-links ">
+                <li>
+                    <a href="index.html ">Accueil</a>
+                </li>
+                <li>
+                    <a href="articles.html ">Articles</a>
+                </li>
+                <li>
+                    <a href="videos.html ">Vidéos</a>
+                </li>
+                <li>
+                    <a href="photos.html ">Photos</a>
+                </li>
+                <li>
+                    <a href="login.html ">Login</a>
+                </li>
+                <li>
+                    <a href="contact.html ">Contact</a>
+                </li>
+                <li>
+                    <a href="presentation.html">Qui sommes-nous</a>
+                </li>
+            </ul>
+            <ul class="footer-infos-links ">
+                <li>
+                    <p>Liens externes</p>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.fr/animaux/le-pangolin-dafrique-est-le-mammifere-le-plus-braconne-du-monde ">Le pangolin d’ Afrique est le mammifère le plus braconné du monde</a>
+                </li>
+                <li>
+                    <a href="https://www.lci.fr/international/le-pangolin-mammifere-mysterieux-menace-par-le-braconnage-1553282.html#:~:text=VID%C3%89O%20-%20Le%20pangolin%2C%20l%E2%80%99animal%20le%20plus%20braconn%C3%A9,tous%20les%20moyens%20il%20y%20a%205%20ans ">les pangolins sont désormais protégés du braconnage</a>
+                </li>
+                <li>
+                    <a href="https://www.nationalgeographic.fr/animaux/8-especes-menacees-dextinction-par-le-trafic-illegal-despeces-sauvages ">5 espèces menacées d'extinction par le trafic illégal d’espèces sauvages</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/user/FreeDocumentary ">Free Documentary - Nature Chaine youtube </a>
+                </li>
+            </ul>
+            <div class="footer-links ">
+
+                <a href="https://instagram.com/free.documentary?utm_medium=copy_link ">
+                    <img src="images/insta.png " alt="insta "></a>
+                <a href="https://www.youtube.com/user/FreeDocumentary ">
+                    <img src="images/you.png " alt="you "></a>
+                <a href="https://www.facebook.com/FreeDocumentaryOfficial/ ">
+                    <img src="images/face.png " alt="face "></a>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
